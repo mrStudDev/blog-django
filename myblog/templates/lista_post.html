@@ -1,0 +1,21 @@
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>My__blog</title>
+</head>
+<body>
+    
+
+    {% for object in object_list %}
+
+    <a href="{{ object.get_absolute_url }}"><h1>{{ object.titulo }}</h1></a>
+    <h5> {{ object.data }}</h5>
+    <h6>#{{ object.categoria }}</h6>
+    <p>{{ object.conteudo | safe | linebreaks }}</p>
+    
+    
+    {% endfor %}
